@@ -3,6 +3,7 @@ import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import Header from './components/Header.vue'
 import TabButton from './components/TabButton.vue'
+import Tabs from './components/Tabs.vue'
 </script>
 
 <template>
@@ -16,7 +17,7 @@ import TabButton from './components/TabButton.vue'
       <Header />
     </div>
     <div>
-      <TabButton :name="'about me'" />
+      <Tabs />
     </div>
 
   

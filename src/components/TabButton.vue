@@ -3,18 +3,17 @@ import { ref } from 'vue'
 
 const props = defineProps(
   {
-    "name": { type: String, required: true }
+    "name": { type: String, required: true },
+    "selected": {type: Boolean, required: true}
   }
 )
 
 const emit = defineEmits<{
-  (e: 'emitSelected'): void
+  (e: 'e-selected'): void
 }>()
 
-const selected = ref(true)
 function toggle() {
-  selected.value = !selected.value
-  emit('emitSelected')
+  emit('e-selected')
 }
 
 </script>
@@ -22,7 +21,7 @@ function toggle() {
 <template>
   <div :class="selected ? 'rectangle_selected' : 'rectangle'" @click="toggle">
     <div :class="selected ? 'tab_text_selected' : 'tab_text'">
-      {{ name }}
+      <p>{{ name }}</p>
     </div>
   </div>
 </template>
@@ -31,7 +30,7 @@ function toggle() {
 .rectangle {
   box-sizing: border-box;
 
-  height: 75px;
+  height: 60px;
 
   background: #FFFFFF;
   border: 3px solid #D9D9D9;
@@ -41,7 +40,7 @@ function toggle() {
 .rectangle_selected {
   box-sizing: border-box;
 
-  height: 75px;
+  height: 60px;
 
   background: #D9D9D9;
   border: 3px solid #0474FF;
@@ -49,35 +48,33 @@ function toggle() {
 }
 
 .tab_text {
-  position: absolute;
-  left: 8.79%;
-  right: 8.24%;
-  top: 20%;
-  bottom: 20%;
-
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 28px;
+  
   line-height: 39px;
   text-align: center;
+
+  top: 20%;
+  bottom: 20%;
 
   color: #000000;
 }
 
 .tab_text_selected {
-  position: absolute;
-  left: 8.79%;
-  right: 8.24%;
-  top: 20%;
-  bottom: 20%;
-
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 32px;
+  font-size: 28px;
+  
   line-height: 39px;
   text-align: center;
+
+  top: 20%;
+  bottom: 20%;
+
+  text-decoration: underline;
 
   color: #0474FF;
 

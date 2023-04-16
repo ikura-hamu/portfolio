@@ -9,7 +9,7 @@
       <h1>いくら・はむ</h1>
       <h2>@ikura-hamu</h2>
     </div>
-    
+
   </div>
 </template>
 
@@ -21,9 +21,9 @@
   margin-right: auto;
 }
 
-.top{
+.top {
   display: grid;
-  grid-template-columns: 1fr 2fr; 
+  grid-template-columns: 1fr 2fr;
 }
 
 .name {
