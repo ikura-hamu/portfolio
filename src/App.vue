@@ -1,31 +1,34 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
 import Header from './components/Header.vue'
 import TabButton from './components/TabButton.vue'
 import Tabs from './components/Tabs.vue'
 import Bar from './components/Bar.vue'
+import Preparing from './components/Preparing.vue'
+
+function tabChange(tabName: string): void {
+  currentTabName.value = tabName
+}
+
+const currentTabName = ref("about me")
 </script>
 
 <template>
-  <!-- <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-            <div class="wrapper">
-              <HelloWorld msg="You did it!" />
-            </div> -->
   <div class="header">
     <Header />
 
-    <Tabs />
+    <Tabs @change="(tabName) => tabChange(tabName)" />
 
     <Bar />
   </div>
 
-
-
-
   <main>
-    <!-- <TheWelcome /> -->
+    <Preparing v-if="currentTabName=='about me'" :content-name="'about me'" />
+    <Preparing v-if="currentTabName=='works'" :content-name="'works'" />
+    <Preparing v-if="currentTabName=='contact'" :content-name="'contact'" />
   </main>
 </template>
 
