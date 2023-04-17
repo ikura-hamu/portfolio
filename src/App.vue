@@ -8,6 +8,7 @@ import TabButton from './components/TabButton.vue'
 import Tabs from './components/Tabs.vue'
 import Bar from './components/Bar.vue'
 import Preparing from './components/Preparing.vue'
+import AboutMe from './components/AboutMe.vue'
 
 function tabChange(tabName: string): void {
   currentTabName.value = tabName
@@ -26,9 +27,9 @@ const currentTabName = ref("about me")
   </div>
 
   <main>
-    <Preparing v-if="currentTabName=='about me'" :content-name="'about me'" />
-    <Preparing v-if="currentTabName=='works'" :content-name="'works'" />
-    <Preparing v-if="currentTabName=='contact'" :content-name="'contact'" />
+    <AboutMe v-if="currentTabName == 'about me'" />
+    <Preparing v-if="currentTabName == 'works'" :content-name="'works'" />
+    <Preparing v-if="currentTabName == 'contact'" :content-name="'contact'" />
   </main>
 </template>
 
