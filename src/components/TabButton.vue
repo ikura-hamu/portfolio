@@ -4,7 +4,7 @@ import { ref } from 'vue'
 const props = defineProps(
   {
     "name": { type: String, required: true },
-    "selected": {type: Boolean, required: true}
+    "selected": { type: Boolean, required: true }
   }
 )
 
@@ -21,7 +21,7 @@ function toggle() {
 <template>
   <div :class="selected ? 'rectangle_selected' : 'rectangle'" @click="toggle">
     <div :class="selected ? 'tab_text_selected' : 'tab_text'">
-      <p>{{ name }}</p>
+      <h2>{{ name }}</h2>
     </div>
   </div>
 </template>
@@ -51,23 +51,20 @@ function toggle() {
   font-family: 'Inter';
   font-style: normal;
   font-weight: 400;
-  font-size: 28px;
-  
+
   line-height: 39px;
   text-align: center;
 
   top: 20%;
   bottom: 20%;
 
-  color: #000000;
+  color: #8d8d8d;
 }
 
 .tab_text_selected {
   font-family: 'Inter';
   font-style: normal;
-  font-weight: 400;
-  font-size: 28px;
-  
+
   line-height: 39px;
   text-align: center;
 
