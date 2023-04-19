@@ -25,6 +25,8 @@ const currentTabName = ref("about me")
 
     <Bar />
   </div>
+  <!-- <div class="back"></div> -->
+
 
   <main>
     <AboutMe v-if="currentTabName == 'about me'" />
@@ -35,23 +37,55 @@ const currentTabName = ref("about me")
 
 <style>
 .header {
+  position: sticky;
+  margin-top: 1em;
+  top: 1em;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  z-index: 2;
+
+  background-color: #ffffff;
+}
+
+main {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* .back {
+  width: 685px;
+  height: 200px;
+
+  top: 0;
+
+  background: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+} */
 
 .logo {
   display: block;
   margin: 0 auto 2rem;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 512px) {
   .header {
-    width: 390px;
+    width: 95%
+  }
+
+  main {
+    width: 95%;
   }
 }
 
 @media (min-width: 512px) {
   .header {
+    width: 500px;
+  }
+
+  main {
     width: 500px;
   }
 }

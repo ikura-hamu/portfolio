@@ -15,6 +15,7 @@ const grade = computed(() => {
 
 <template>
   <h2>about me</h2>
+  <br>
   <div>
     <h3>大学</h3>
     <ul>
@@ -22,6 +23,7 @@ const grade = computed(() => {
       <li>{{ grade }}</li>
     </ul>
   </div>
+  <br>
   <div>
     <h3>サークル</h3>
     <ul>
@@ -32,6 +34,7 @@ const grade = computed(() => {
       </ul>
     </ul>
   </div>
+  <br>
   <div>
     <h3>技術</h3>
     <ul>
@@ -39,6 +42,7 @@ const grade = computed(() => {
       <li>MySQL</li>
     </ul>
   </div>
+  <br>
   <div>
     <h3>趣味</h3>
     <ul>
