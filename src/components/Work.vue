@@ -13,11 +13,11 @@ const props = defineProps<{
 }>()
 
 const image = computed(() => {
-  return "/src/images/" + props.imageFile
+  return "/src/assets/images/" + props.imageFile
 })
 
 const workIcon = computed(() => {
-  return "/src/images/" + props.service?.icon
+  return "/src/assets/images/" + props.service?.icon
 })
 
 </script>
@@ -28,7 +28,7 @@ const workIcon = computed(() => {
       <a :href="service?.service" target="_blank" rel="noopener noreferrer">
         <img class="image" :src="image" height="120" width="120">
       </a>
-      
+
     </div>
     <div class="text">
       <h2 class="title">{{ props.title }}</h2>
@@ -43,7 +43,7 @@ const workIcon = computed(() => {
     <div class="links">
       <div class="link">
         <a v-if="props.github != null" :href="props.github">
-          <img class="link_icon" src="../images/github-mark.png">
+          <img class="link_icon" src="../assets/images/github-mark.png">
         </a>
       </div>
       <div class="link">
@@ -53,7 +53,7 @@ const workIcon = computed(() => {
       </div>
       <div class="link">
         <a v-if="props.blog != null" :href="props.blog">
-          <img class="link_icon" src="../images/article_material.png">
+          <img class="link_icon" src="../assets/images/article_material.png">
         </a>
       </div>
 

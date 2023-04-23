@@ -4,7 +4,7 @@
 
 <template>
   <div class="top">
-    <img src="../images/ikura-hamu_icon.PNG" class="icon">
+    <img src="../assets/images/ikura-hamu_icon.PNG" class="icon">
     <div class="name">
       <h1>いくら・はむ</h1>
       <h2>@ikura-hamu</h2>
