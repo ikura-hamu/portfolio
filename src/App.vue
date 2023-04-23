@@ -9,12 +9,19 @@ import Tabs from './components/Tabs.vue'
 import Bar from './components/Bar.vue'
 import Preparing from './components/Preparing.vue'
 import AboutMe from './components/AboutMe.vue'
+import Work from './components/Work.vue'
+
+import type WorkData from './components/Work.vue'
+
 
 function tabChange(tabName: string): void {
   currentTabName.value = tabName
 }
 
 const currentTabName = ref("about me")
+
+const aaa = "おにごっこのプロジェクト終わったら何か新しいことやりたいけど、フロントちゃんとやるか、DTMするか迷ってる。おにごっこのプロジェクト終わったら何か新しいことやりたいけど、フロントちゃんとやるか、DTMするか迷ってる"
+const tags=["tag1", "tag2"]
 </script>
 
 <template>
@@ -30,7 +37,8 @@ const currentTabName = ref("about me")
 
   <main>
     <AboutMe v-if="currentTabName == 'about me'" />
-    <Preparing v-if="currentTabName == 'works'" :content-name="'works'" />
+    <Work v-if="currentTabName == 'works'" :title="'title'" :description="aaa"
+      :image-file="'ikura-hamu_icon.PNG'" :github="'aaa'" :blog="'aaa'" :service="{service:'aaa', icon:'ikura-hamu_icon.PNG'}" :tags="tags"/>
     <Preparing v-if="currentTabName == 'contact'" :content-name="'contact'" />
   </main>
 </template>

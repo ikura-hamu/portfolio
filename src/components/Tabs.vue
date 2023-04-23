@@ -28,9 +28,7 @@ function toggleTabs(name: string): void {
 <template>
   <div class="tabs">
     <div v-for="tab in tabValues">
-      <div>
-        <TabButton :name="tab.name" :selected="tab.val" @e-selected="toggleTabs(tab.name)" />
-      </div>
+      <TabButton :name="tab.name" :selected="tab.val" @e-selected="toggleTabs(tab.name)" />
     </div>
   </div>
 </template>
