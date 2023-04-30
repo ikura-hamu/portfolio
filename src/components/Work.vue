@@ -1,32 +1,32 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 
-
 const props = defineProps<{
   title: string
   description: string
-  imageFile: string
-  service?: { "service": string, "icon": string }
+  imageFile?: string
+  service?: string
+  serviceIcon?: string
   github?: string
   blog?: string
   tags?: string[]
 }>()
 
-const image = computed(() => {
-  return "/src/assets/images/" + props.imageFile
-})
+const emit = defineEmits<{
+  (e:'noIcon'):void
+}>()
 
-const workIcon = computed(() => {
-  return "/src/assets/images/" + props.service?.icon
-})
+if (props.service == undefined) {
+  emit("noIcon")
+}
 
 </script>
 
 <template>
   <div class="wrapper">
     <div class="image_wrapper">
-      <a :href="service?.service" target="_blank" rel="noopener noreferrer">
-        <img class="image" :src="image" height="120" width="120">
+      <a :href="service" target="_blank" rel="noopener noreferrer">
+        <img class="image" :src="imageFile" height="120" width="120">
       </a>
 
     </div>
@@ -47,8 +47,8 @@ const workIcon = computed(() => {
         </a>
       </div>
       <div class="link">
-        <a v-if="props.service != null" :href="props.service.service">
-          <img class="link_icon" :src="workIcon">
+        <a v-if="props.service != null" :href="props.service">
+          <img class="link_icon" :src="props.serviceIcon">
         </a>
       </div>
       <div class="link">

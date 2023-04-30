@@ -10,10 +10,13 @@
     "type-check": "vue-tsc --noEmit"
   },
   "dependencies": {
+    "cf-content-types-generator": "^2.12.2",
+    "contentful": "^10.1.3",
+    "fs": "^0.0.1-security",
     "vue": "^3.2.47"
   },
   "devDependencies": {
-    "@types/node": "^18.14.2",
+    "@types/node": "^18.16.0",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vue/tsconfig": "^0.1.3",
     "npm-run-all": "^4.1.5",
