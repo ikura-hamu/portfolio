@@ -10,6 +10,7 @@ import Bar from './components/Bar.vue'
 import Preparing from './components/Preparing.vue'
 import AboutMe from './components/AboutMe.vue'
 import Works from './components/Works.vue'
+import Contact from './components/Contact.vue'
 
 import type WorkData from './components/Work.vue'
 
@@ -40,7 +41,7 @@ const currentTabName = ref("about me")
       <Works />
     </div>
     <div v-show="currentTabName === 'contact'">
-      <Preparing :content-name="'contact'" />
+      <Contact />
     </div>
 
   </main>
