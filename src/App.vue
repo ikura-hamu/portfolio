@@ -33,9 +33,16 @@ const currentTabName = ref("about me")
   <!-- <div class="back"></div> -->
 
   <main>
-    <AboutMe v-if="currentTabName === 'about me'" />
-    <Works v-if="currentTabName === 'works'" />
-    <Preparing v-if="currentTabName === 'contact'" :content-name="'contact'" />
+    <div v-show="currentTabName === 'about me'">
+      <AboutMe />
+    </div>
+    <div v-show="currentTabName === 'works'">
+      <Works />
+    </div>
+    <div v-show="currentTabName === 'contact'">
+      <Preparing :content-name="'contact'" />
+    </div>
+
   </main>
 </template>
 
@@ -92,5 +99,4 @@ main {
   main {
     width: 500px;
   }
-}
-</style>
+}</style>
