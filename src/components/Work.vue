@@ -13,7 +13,7 @@ const props = defineProps<{
 }>()
 
 const emit = defineEmits<{
-  (e:'noIcon'):void
+  (e: 'noIcon'): void
 }>()
 
 if (props.service == undefined) {
@@ -24,11 +24,12 @@ if (props.service == undefined) {
 
 <template>
   <div class="wrapper">
-    <div class="image_wrapper">
+    <div class="image_a_wrapper">
       <a :href="service" target="_blank" rel="noopener noreferrer">
-        <img class="image" :src="imageFile" height="120" width="120">
+        <div class="image_wrapper">
+          <img class="image" :src="imageFile">
+        </div>
       </a>
-
     </div>
     <div class="text">
       <h2 class="title">{{ props.title }}</h2>
@@ -76,14 +77,21 @@ if (props.service == undefined) {
 
 }
 
-.image_wrapper {
+img {
+  max-width: 100%;
+  max-height: auto;
+  
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.image_a_wrapper {
   margin: auto;
   border-radius: 8px;
 }
 
-.image_wrapper:hover {
+img:hover {
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-
 }
 
 .title {

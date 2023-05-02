@@ -22,6 +22,7 @@
 }
 
 .top {
+  margin-top: 16px;
   display: grid;
   grid-template-columns: 1fr 2fr;
 }

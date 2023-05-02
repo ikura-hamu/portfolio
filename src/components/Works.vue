@@ -97,7 +97,7 @@ onMounted(() => {
           tags: entry.fields.tags,
           blog: entry.fields.blog,
           github: entry.fields.github,
-          service: entry.fields.github,
+          service: entry.fields.service,
         }
         if (entry.fields.serviceIcon?.sys.id != undefined) {
           work.serviceIcon = images[entry.fields.serviceIcon?.sys.id]

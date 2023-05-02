@@ -50,8 +50,8 @@ const currentTabName = ref("about me")
 <style>
 .header {
   position: sticky;
-  margin-top: 1em;
-  top: 1em;
+  padding-top: 12px;
+  top: 0em;
 
   margin-left: auto;
   margin-right: auto;
@@ -100,4 +100,5 @@ main {
   main {
     width: 500px;
   }
-}</style>
+}
+</style>
