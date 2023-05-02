@@ -92,6 +92,7 @@ img {
 
 img:hover {
   box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+  background-color: #0474FF33;
 }
 
 .title {

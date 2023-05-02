@@ -14,45 +14,47 @@ const grade = computed(() => {
 </script>
 
 <template>
-  <h2>about me</h2>
-  <br>
-  <div>
-    <h3>大学</h3>
-    <ul>
-      <li>東京工業大学 工学院情報通信系</li>
-      <li>{{ grade }}</li>
-    </ul>
-  </div>
-  <br>
-  <div>
-    <h3>サークル</h3>
-    <ul>
-      <li>東京工業大学デジタル創作同好会traP</li>
+  <div class="wrapper">
+    <h2>about me</h2>
+    <br>
+    <div>
+      <h3>大学</h3>
       <ul>
-        <li>公式ページ <a href="https://trap.jp">https://trap.jp</a></li>
-        <li>Twitter <a href="https://twitter.com/traPtitech">@traPtitech</a></li>
+        <li>東京工業大学 工学院情報通信系</li>
+        <li>{{ grade }}</li>
       </ul>
-    </ul>
-  </div>
-  <br>
-  <div>
-    <h3>技術</h3>
-    <ul>
-      <li>Go</li>
-      <li>MySQL</li>
-    </ul>
-  </div>
-  <br>
-  <div>
-    <h3>趣味</h3>
-    <ul>
-      <li>ゲーム作成</li>
+    </div>
+    <br>
+    <div>
+      <h3>サークル</h3>
       <ul>
-        <li>Springin' <a href="https://www.springin.org/">公式ページ</a></li>
-        <li>Unity</li>
+        <li>東京工業大学デジタル創作同好会traP</li>
+        <ul>
+          <li>公式ページ <a href="https://trap.jp">https://trap.jp</a></li>
+          <li>Twitter <a href="https://twitter.com/traPtitech">@traPtitech</a></li>
+        </ul>
       </ul>
-      <li>バスケットボール</li>
-    </ul>
+    </div>
+    <br>
+    <div>
+      <h3>技術</h3>
+      <ul>
+        <li>Go</li>
+        <li>MySQL</li>
+      </ul>
+    </div>
+    <br>
+    <div>
+      <h3>趣味</h3>
+      <ul>
+        <li>ゲーム作成</li>
+        <ul>
+          <li>Springin' <a href="https://www.springin.org/">公式ページ</a></li>
+          <li>Unity</li>
+        </ul>
+        <li>バスケットボール</li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -60,5 +62,13 @@ const grade = computed(() => {
 h2 {
   color: #0474FF;
   text-decoration: underline;
+}
+
+.wrapper {
+  margin-left: 1rem;
+}
+
+ul {
+  margin-left: 1rem;
 }
 </style>
