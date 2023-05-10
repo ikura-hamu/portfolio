@@ -20,6 +20,10 @@ if (props.service == undefined) {
   emit("noIcon")
 }
 
+function autoLink(text:string) {
+    return text.replace(/(https?:\/\/[^\s]*)/g, "<a href='$1'  target=\"_blank\" rel=\"noopener noreferrer\">$1</a>");
+}
+
 </script>
 
 <template>
@@ -39,21 +43,21 @@ if (props.service == undefined) {
         </div>
       </div>
       <br>
-      <div class="description">{{ props.description }}</div>
+      <div class="description"><p v-html="autoLink(props.description)"></p></div>
     </div>
     <div class="links">
       <div class="link">
-        <a v-if="props.github != null" :href="props.github">
+        <a v-if="props.github != null" :href="props.github"  target="_blank" rel="noopener noreferrer">
           <img class="link_icon" src="../assets/images/github-mark.png">
         </a>
       </div>
       <div class="link">
-        <a v-if="props.service != null" :href="props.service">
+        <a v-if="props.service != null" :href="props.service"  target="_blank" rel="noopener noreferrer">
           <img class="link_icon" :src="props.serviceIcon">
         </a>
       </div>
       <div class="link">
-        <a v-if="props.blog != null" :href="props.blog">
+        <a v-if="props.blog != null" :href="props.blog"  target="_blank" rel="noopener noreferrer">
           <img class="link_icon" src="../assets/images/article_material.png">
         </a>
       </div>
@@ -66,13 +70,14 @@ if (props.service == undefined) {
 .wrapper {
   display: grid;
   grid-template-columns: 3.5fr 8fr 1fr;
-  margin-top: 32px;
+  margin-top: 4px;
+  margin-bottom: 32px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 4px;
   padding-right: 4px;
   border: 2px solid;
-  border-color: black;
+  border-color: #D9D9D9;
   border-radius: 16px;
 
 }

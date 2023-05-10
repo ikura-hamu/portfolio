@@ -11,7 +11,7 @@ import Preparing from './components/Preparing.vue'
 import AboutMe from './components/AboutMe.vue'
 import Works from './components/Works.vue'
 import Contact from './components/Contact.vue'
-
+import WorksFromObjects from './components/WorksFromObjects.vue'
 import type WorkData from './components/Work.vue'
 
 
@@ -38,7 +38,8 @@ const currentTabName = ref("about me")
       <AboutMe />
     </div>
     <div v-if="currentTabName === 'works'">
-      <Works />
+      <!-- <Works /> -->
+      <WorksFromObjects />
     </div>
     <div v-if="currentTabName === 'contact'">
       <Contact />
