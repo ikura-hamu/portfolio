@@ -34,13 +34,13 @@ const currentTabName = ref("about me")
   <!-- <div class="back"></div> -->
 
   <main>
-    <div v-show="currentTabName === 'about me'">
+    <div v-if="currentTabName === 'about me'">
       <AboutMe />
     </div>
-    <div v-show="currentTabName === 'works'">
+    <div v-if="currentTabName === 'works'">
       <Works />
     </div>
-    <div v-show="currentTabName === 'contact'">
+    <div v-if="currentTabName === 'contact'">
       <Contact />
     </div>
 
