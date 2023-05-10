@@ -1,6 +1,7 @@
 /// <reference types="vite/client" />
 interface ImportMetaEnv {
   readonly VITE_ACCESS_TOKEN: string
+  readonly VITE_WEBHOOK_URL: string
 }
 
 interface ImportMeta {
