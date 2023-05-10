@@ -64,9 +64,13 @@ h2 {
   text-decoration: underline;
 }
 
-.wrapper {
-  margin-left: 1rem;
+h3 {
+  color: #0474FF;
 }
+
+/* .wrapper {
+  margin-left: 1rem;
+} */
 
 ul {
   margin-left: 1rem;

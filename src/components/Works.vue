@@ -39,37 +39,6 @@ const works = ref<workType[]>([])
 
 let images: { [id: string]: string | undefined } = {}
 
-// client.getAssets().then((assets) => {
-//   assets.items.forEach(asset => {
-//     images[asset.sys.id] = asset.fields.file?.url
-//   });
-// })
-
-// client.getEntries<TypeWorkSkeleton>({
-//   content_type: 'work',
-//   // 'fields.serviceIcon[exists]':true
-// }).then((entries) => {
-//   entries.items.forEach((entry, i) => {
-//     let work: workType
-
-//     work = {
-//       title: entry.fields.title,
-//       description: entry.fields.description,
-//       tags: entry.fields.tags,
-//       blog: entry.fields.blog,
-//       github: entry.fields.github,
-//       service: entry.fields.github,
-//     }
-//     if (entry.fields.serviceIcon?.sys.id != undefined) {
-//       work.serviceIcon = images[entry.fields.serviceIcon?.sys.id]
-//     }
-//     if (images[entry.fields.image.sys.id] != undefined) {
-//       work.image = images[entry.fields.image.sys.id]
-//     }
-//     works.value.push(work)
-//   });
-// })
-
 onMounted(() => {
   let assets = async () => {
     return await client.getAssets()
@@ -113,8 +82,8 @@ onMounted(() => {
   setTimeout(makeWork, 5)
 })
 
-function reload():void {
-  
+function reload(): void {
+
 }
 
 
@@ -122,8 +91,16 @@ function reload():void {
 </script>
 
 <template>
+  <h2>works</h2>
   <div v-for="work in works">
     <Work :title="work.title" :description="work.description" :image-file="work.image" :tags="work.tags" :blog="work.blog"
       :service="work.service" :service-icon="work.serviceIcon" :github="work.github" @no-icon="reload" />
   </div>
 </template>
+
+<style scoped>
+h2 {
+  color: #0474FF;
+  text-decoration: underline;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <h2>Contact</h2>
+  <h2>contact</h2>
 
   <div class="account">
     <img src="../assets/images/github-mark.png">
@@ -52,5 +52,7 @@ img {
 
 .account_name a {
   font-size: larger;
+  color: #0474FF;
+  text-underline-offset: 4px;
 }
 </style>

@@ -66,7 +66,7 @@ if (props.service == undefined) {
 .wrapper {
   display: grid;
   grid-template-columns: 3.5fr 8fr 1fr;
-  margin-top: 16px;
+  margin-top: 32px;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 4px;

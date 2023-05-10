@@ -52,7 +52,7 @@ const currentTabName = ref("about me")
   position: sticky;
   padding-top: 12px;
   top: 0em;
-
+  
   margin-left: auto;
   margin-right: auto;
 
@@ -88,7 +88,7 @@ main {
   }
 
   main {
-    width: 95%;
+    width: 90%;
   }
 }
 
@@ -98,7 +98,7 @@ main {
   }
 
   main {
-    width: 500px;
+    width: 450px;
   }
 }
 </style>
