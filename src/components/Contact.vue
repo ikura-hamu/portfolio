@@ -102,8 +102,8 @@ h3 {
 }
 
 img {
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   margin-left: auto;
   margin-right: auto;
 }
