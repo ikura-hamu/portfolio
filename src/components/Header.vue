@@ -15,10 +15,18 @@
 
 <style>
 .icon {
-  height: 120px;
-  width: 120px;
+  height: 100px;
+  width: 100px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: #D9D9D9;
+}
+
+.icon:hover {
+  border-color: #0474FF;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
 }
 
 .top {
@@ -31,5 +39,6 @@
   display: grid;
   margin-top: auto;
   margin-bottom: auto;
+  margin-left: 16px;
 }
 </style>
