@@ -4,7 +4,7 @@ import { computed } from 'vue'
 const props = defineProps<{
   title: string
   description: string
-  imageFile?: string
+  imageFile: string
   service?: string
   serviceIcon?: string
   github?: string
@@ -31,7 +31,7 @@ function autoLink(text:string) {
     <div class="image_a_wrapper">
       <a :href="service" target="_blank" rel="noopener noreferrer">
         <div class="image_wrapper">
-          <img class="image" :src="imageFile">
+          <img class="image" :src="`../assets/images/${props.imageFile}`">
         </div>
       </a>
     </div>
@@ -53,7 +53,7 @@ function autoLink(text:string) {
       </div>
       <div class="link">
         <a v-if="props.service != null" :href="props.service"  target="_blank" rel="noopener noreferrer">
-          <img class="link_icon" :src="props.serviceIcon">
+          <img class="link_icon" :src="`../assets/images/${props.serviceIcon}`">
         </a>
       </div>
       <div class="link">

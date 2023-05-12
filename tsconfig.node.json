@@ -11,6 +11,5 @@
     "types": [
       "node"
     ],
-    "ignoreDeprecations": "5.0"
   }
 }
