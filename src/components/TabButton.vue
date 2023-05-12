@@ -37,6 +37,15 @@ function toggle() {
   border-radius: 30px;
 }
 
+.rectangle:hover {
+  box-sizing: border-box;
+
+  height: 60px;
+
+  border-radius: 30px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.25);
+}
+
 .rectangle_selected {
   box-sizing: border-box;
 
@@ -45,6 +54,7 @@ function toggle() {
   background: #D9D9D9;
   border: 3px solid #0474FF;
   border-radius: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
 }
 
 .tab_text {
