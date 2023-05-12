@@ -20,8 +20,12 @@ if (props.service == undefined) {
   emit("noIcon")
 }
 
-function autoLink(text:string) {
-    return text.replace(/(https?:\/\/[^\s]*)/g, "<a href='$1'  target=\"_blank\" rel=\"noopener noreferrer\">$1</a>");
+function autoLink(text: string) {
+  return text.replace(/(https?:\/\/[^\s]*)/g, "<a href='$1'  target=\"_blank\" rel=\"noopener noreferrer\">$1</a>");
+}
+
+const generateImgPath = (fileName: string | undefined): string => {
+  return new URL(`../assets/images/${fileName}`, import.meta.url).href
 }
 
 </script>
@@ -31,7 +35,7 @@ function autoLink(text:string) {
     <div class="image_a_wrapper">
       <a :href="service" target="_blank" rel="noopener noreferrer">
         <div class="image_wrapper">
-          <img class="image" :src="`../assets/images/${props.imageFile}`">
+          <img class="image" :src="generateImgPath(props.imageFile)">
         </div>
       </a>
     </div>
@@ -43,21 +47,23 @@ function autoLink(text:string) {
         </div>
       </div>
       <br>
-      <div class="description"><p v-html="autoLink(props.description)"></p></div>
+      <div class="description">
+        <p v-html="autoLink(props.description)"></p>
+      </div>
     </div>
     <div class="links">
       <div class="link">
-        <a v-if="props.github != null" :href="props.github"  target="_blank" rel="noopener noreferrer">
+        <a v-if="props.github != null" :href="props.github" target="_blank" rel="noopener noreferrer">
           <img class="link_icon" src="../assets/images/github-mark.png">
         </a>
       </div>
       <div class="link">
-        <a v-if="props.service != null" :href="props.service"  target="_blank" rel="noopener noreferrer">
-          <img class="link_icon" :src="`../assets/images/${props.serviceIcon}`">
+        <a v-if="props.service != null" :href="props.service" target="_blank" rel="noopener noreferrer">
+          <img class="link_icon" :src="generateImgPath(props.serviceIcon)">
         </a>
       </div>
       <div class="link">
-        <a v-if="props.blog != null" :href="props.blog"  target="_blank" rel="noopener noreferrer">
+        <a v-if="props.blog != null" :href="props.blog" target="_blank" rel="noopener noreferrer">
           <img class="link_icon" src="../assets/images/article_material.png">
         </a>
       </div>
@@ -85,7 +91,7 @@ function autoLink(text:string) {
 img {
   max-width: 100%;
   max-height: auto;
-  
+
   padding: 4px;
   border-radius: 8px;
 }
