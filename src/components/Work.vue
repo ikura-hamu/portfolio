@@ -4,7 +4,7 @@ import { computed } from 'vue'
 const props = defineProps<{
   title: string
   description: string
-  imageFile: string
+  imageFile?: string
   service?: string
   serviceIcon?: string
   github?: string
