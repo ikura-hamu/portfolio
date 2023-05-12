@@ -54,7 +54,7 @@ export const works: work[] = [
     description: "このサイトです。フロントエンドの練習として、Vue3+Typescriptで作りました。ここからブログ機能などを追加していきたいです。",
     image: "ikura-hamu_icon.png",
     tags: ["Vue.js", "フロントエンド"],
-    service: "https://ikura-hamu.tech",
+    service: "https://ikura-hamu-portfolio.vercel.app/",
     serviceImage: "ikura-hamu_icon.png",
     github: "https://github.com/ikura-hamu/portfolio",
   }
