@@ -73,6 +73,14 @@ console.log(import.meta.env.VITE_WEBHOOK_URL)
   <div class="messages">
     <h3>いくら・はむに直接語り掛ける</h3>
     <div>
+      例
+      <ul class="example">
+        <li>好きな食べ物は何ですか。</li>
+        <li>しゃべりたいです。</li>
+        <li>ラーメンおごってあげる。</li>
+      </ul>
+    </div>
+    <div>
       <label for="name">お名前</label>
       <input class="name" name="name" v-model="name" />
     </div>
@@ -126,6 +134,10 @@ img {
   text-underline-offset: 4px;
 }
 
+.example {
+  margin-left: 16px;
+}
+
 .name {
   width: 95%;
   height: 30px;
@@ -169,7 +181,7 @@ img {
 }
 
 .send_button {
-  width: 70%;
+  width: 80%;
   height: 30px;
   border-radius: 8px;
   border: 2px solid;
