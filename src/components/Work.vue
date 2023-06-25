@@ -164,7 +164,7 @@ a:hover {
   font-size: small;
   font-weight: bold;
   color: #0474FF;
-  border: 1px solid rgb(247, 255, 150);
+  border: 1px solid #F7FF96;
   border-radius: 4px;
 }
 </style>
