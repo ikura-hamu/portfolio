@@ -1,19 +1,12 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import Header from './components/Header.vue'
-import TabButton from './components/TabButton.vue'
 import Tabs from './components/Tabs.vue'
 import Bar from './components/Bar.vue'
-import Preparing from './components/Preparing.vue'
 import AboutMe from './components/AboutMe.vue'
-import Works from './components/Works.vue'
 import Contact from './components/Contact.vue'
 import WorksFromObjects from './components/WorksFromObjects.vue'
-import type WorkData from './components/Work.vue'
-
 
 const tabNamesAboutMe = "about me"
 const tabNamesWorks = "works"
@@ -47,7 +40,6 @@ const currentTabName = ref(tabNamesAboutMe)
 
     <Bar />
   </div>
-  <!-- <div class="back"></div> -->
 
   <main>
     <div v-show="currentTabName === tabNamesAboutMe" :id="tabNamesAboutMe">
@@ -82,17 +74,6 @@ main {
   margin-left: auto;
   margin-right: auto;
 }
-
-/* .back {
-  width: 685px;
-  height: 200px;
-
-  top: 0;
-
-  background: #ffffff;
-  margin-left: auto;
-  margin-right: auto;
-} */
 
 .logo {
   display: block;

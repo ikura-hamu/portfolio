@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import Work from './Work.vue'
 import * as contentful from 'contentful'
-import { computed, onMounted, ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 import type { ChainModifiers, Entry, EntryFieldTypes, EntrySkeletonType, LocaleCode } from "contentful";
 
