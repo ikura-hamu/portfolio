@@ -28,6 +28,14 @@ export const works: work[] = [
     blog: "https://trap.jp/post/1842"
   },
   {
+    title: "いかしかめかアクティビティズ",
+    description: "サークルの2023年春ハッカソンで作ったWebアプリ（ゲーム）です。部内SNSのメッセージを使ったゲームで、優秀賞を獲得しました。設計から行い、interfaceを用いて疎結合を目指しつつ初心者にもわかりやすいディレクトリ構成を目指しました。",
+    image: "ika-shika-meka.png",
+    tags: ["Go", "バックエンド"],
+    github: "https://github.com/traP-jp/h23s_01",
+    blog: "https://trap.jp/post/1899"
+  },
+  {
     title: "QRiP",
     description: "QRiPはマイナンバーカードとQRコードを用いた旅行支援ツールです。宮城県が主催した「みやぎハッカソン」(https://2023.hackathon.miyagi.jp/ ) にチーム「牛タンずんだ餅」で3日間で開発し、サーバーサイドを担当しました。",
     image: "QRiP.jpg",
