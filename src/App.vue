@@ -15,11 +15,27 @@ import WorksFromObjects from './components/WorksFromObjects.vue'
 import type WorkData from './components/Work.vue'
 
 
-function tabChange(tabName: string): void {
-  currentTabName.value = tabName
+const tabNamesAboutMe = "about me"
+const tabNamesWorks = "works"
+const tabNamesContact = "contact"
+
+const tabScroll: { [tabName: string]: number } = {
+  [tabNamesAboutMe]: 0,
+  [tabNamesWorks]: 0,
+  [tabNamesContact]: 0,
 }
 
-const currentTabName = ref("about me")
+function tabChange(tabName: string): void {
+  tabScroll[currentTabName.value] = window.scrollY
+  currentTabName.value = tabName
+
+  setTimeout(() => {
+    window.scrollTo(0, tabScroll[tabName])
+  }, 1)
+
+}
+
+const currentTabName = ref(tabNamesAboutMe)
 
 </script>
 
@@ -34,14 +50,14 @@ const currentTabName = ref("about me")
   <!-- <div class="back"></div> -->
 
   <main>
-    <div v-if="currentTabName === 'about me'">
+    <div v-show="currentTabName === tabNamesAboutMe" :id="tabNamesAboutMe">
       <AboutMe />
     </div>
-    <div v-if="currentTabName === 'works'">
+    <div v-show="currentTabName === tabNamesWorks" :id="tabNamesWorks">
       <!-- <Works /> -->
       <WorksFromObjects />
     </div>
-    <div v-if="currentTabName === 'contact'">
+    <div v-show="currentTabName === tabNamesContact" :id="tabNamesContact">
       <Contact />
     </div>
 
@@ -53,7 +69,7 @@ const currentTabName = ref("about me")
   position: sticky;
   padding-top: 12px;
   top: 0em;
-  
+
   margin-left: auto;
   margin-right: auto;
 
