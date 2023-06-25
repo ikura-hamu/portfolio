@@ -28,7 +28,7 @@ function toggleTabs(name: string): void {
 <template>
   <div class="tabs">
     <div v-for="tab in tabValues">
-      <TabButton :name="tab.name" :selected="tab.val" @e-selected="toggleTabs(tab.name)" />
+      <TabButton :name="tab.name" :selected="tab.val" @e-selected="toggleTabs(tab.name)" class="tab" />
     </div>
   </div>
 </template>
@@ -37,5 +37,9 @@ function toggleTabs(name: string): void {
 .tabs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+
+.tab{
+  cursor: pointer;
 }
 </style>
