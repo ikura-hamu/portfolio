@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import SkillTable from './SkillTable.vue'
 
 const grade = computed(() => {
   let now = new Date()
@@ -38,10 +39,7 @@ const grade = computed(() => {
     <br>
     <div>
       <h3>技術</h3>
-      <ul>
-        <li>Go</li>
-        <li>MySQL</li>
-      </ul>
+      <SkillTable />
     </div>
     <br>
     <div>
@@ -53,6 +51,7 @@ const grade = computed(() => {
           <li>Unity</li>
         </ul>
         <li>バスケットボール</li>
+        <li>サッカー観戦</li>
       </ul>
     </div>
   </div>
