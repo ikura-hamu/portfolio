@@ -36,6 +36,15 @@ export const works: work[] = [
     blog: "https://trap.jp/post/1899"
   },
   {
+    title: "Webエンジニアになろう講習会",
+    description: "traPで毎年新入生向けに行われる講習会の2023年度講師を担当しました。資料はDBとDockerの章を書きました。初心者に伝えられるよう、語句の説明を増やすなど工夫しました。",
+    image: "naro.png",
+    tags: ["MySQL", "Docker", "Go", "バックエンド"],
+    service: "https://traPtitech.github.io/naro-text",
+    serviceImage: "naro.png",
+    github: "https://github.com/traPtitech/naro-text",
+  },
+  {
     title: "QRiP",
     description: "QRiPはマイナンバーカードとQRコードを用いた旅行支援ツールです。宮城県が主催した「みやぎハッカソン」(https://2023.hackathon.miyagi.jp/ ) にチーム「牛タンずんだ餅」で3日間で開発し、サーバーサイドを担当しました。",
     image: "QRiP.jpg",
