@@ -21,6 +21,11 @@ export const skills: skill[] =[
     comment: "普段の開発で使っています"
   },
   {
+    skill: "Python",
+    level: 3,
+    comment: "競プロで使います"
+  },
+  {
     skill: "Vue.js",
     level: 2,
     comment: "ちょっとだけわかります"
