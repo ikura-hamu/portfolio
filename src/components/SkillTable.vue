@@ -44,18 +44,12 @@ td {
 }
 
 table {
-  table-layout: fixed;
-  display: block;
   width: 100%;
   margin: 0 auto;
-  /* display: block; */
   overflow-x: auto;
   border-spacing: 0;
+  padding-right: 0px;
 }
-
-/* tbody {
-  white-space: nowrap;
-} */
 
 thead {
   background-color: #0474FF;
@@ -72,5 +66,10 @@ td {
   padding: 5px 10px;
   border-top-width: 0;
   border-left-width: 0;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  width: 100px;
 }
 </style>

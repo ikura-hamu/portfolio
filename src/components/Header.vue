@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 .icon {
   height: 100px;
   width: 100px;

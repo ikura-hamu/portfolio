@@ -25,7 +25,7 @@ function toggle() {
   </div>
 </template>
 
-<style>
+<style scoped>
 .rectangle {
   box-sizing: border-box;
 

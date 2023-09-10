@@ -41,22 +41,20 @@ const currentTabName = ref(tabNamesAboutMe)
     <Bar />
   </div>
 
-  <main>
+  <div class="body">
     <div v-show="currentTabName === tabNamesAboutMe" :id="tabNamesAboutMe">
       <AboutMe />
     </div>
     <div v-show="currentTabName === tabNamesWorks" :id="tabNamesWorks">
-      <!-- <Works /> -->
       <WorksFromObjects />
     </div>
     <div v-show="currentTabName === tabNamesContact" :id="tabNamesContact">
       <Contact />
     </div>
-
-  </main>
+  </div>
 </template>
 
-<style>
+<style scoped>
 .header {
   position: sticky;
   padding-top: 12px;
@@ -70,7 +68,7 @@ const currentTabName = ref(tabNamesAboutMe)
   background-color: #ffffff;
 }
 
-main {
+.body {
   margin-left: auto;
   margin-right: auto;
 }
@@ -85,18 +83,28 @@ main {
     width: 95%
   }
 
-  main {
+  .body {
     width: 90%;
   }
 }
 
-@media (min-width: 512px) {
+@media (min-width: 512px) and (max-width: 1024px) {
   .header {
-    width: 500px;
+    width: 80%;
   }
 
-  main {
-    width: 450px;
+  .body {
+    width: 75%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    width: 820px;
+  }
+
+  .body {
+    width: 768px;
   }
 }
 </style>

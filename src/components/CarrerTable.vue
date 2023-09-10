@@ -44,18 +44,12 @@ td {
 }
 
 table {
-  table-layout: fixed;
-  display: block;
   width: 100%;
   margin: 0 auto;
-  /* display: block; */
   overflow-x: auto;
   border-spacing: 0;
+  padding-right: 0px;
 }
-
-/* tbody {
-  white-space: nowrap;
-} */
 
 thead {
   background-color: #0474FF;

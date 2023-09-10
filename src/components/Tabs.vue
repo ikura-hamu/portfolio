@@ -33,7 +33,7 @@ function toggleTabs(name: string): void {
   </div>
 </template>
 
-<style>
+<style scoped>
 .tabs {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
