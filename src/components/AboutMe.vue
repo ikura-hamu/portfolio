@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import SkillTable from './SkillTable.vue'
+import CareerTable from './CarrerTable.vue'
 
 const grade = computed(() => {
   let now = new Date()
@@ -40,6 +41,11 @@ const grade = computed(() => {
     <div>
       <h3>技術</h3>
       <SkillTable />
+    </div>
+    <br>
+    <div>
+      <h3>職歴</h3>
+      <CareerTable />
     </div>
     <br>
     <div>
