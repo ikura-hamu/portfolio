@@ -56,10 +56,9 @@ const currentTabName = ref(tabNamesAboutMe)
 
 <style scoped>
 .header {
-  position: sticky;
   padding-top: 12px;
   top: 0em;
-
+  position: sticky;
   margin-left: auto;
   margin-right: auto;
 
@@ -78,9 +77,11 @@ const currentTabName = ref(tabNamesAboutMe)
   margin: 0 auto 2rem;
 }
 
-@media (max-width: 512px) {
+@media (max-width: 768px) {
   .header {
-    width: 95%
+    width: 95%;
+    position: relative;
+    z-index: 0;
   }
 
   .body {
@@ -88,7 +89,7 @@ const currentTabName = ref(tabNamesAboutMe)
   }
 }
 
-@media (min-width: 512px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
   .header {
     width: 80%;
   }
