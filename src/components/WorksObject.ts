@@ -43,6 +43,7 @@ export const works: work[] = [
     service: "https://traPtitech.github.io/naro-text",
     serviceImage: "naro.png",
     github: "https://github.com/traPtitech/naro-text",
+    blog: "https://trap.jp/post/1969"
   },
   {
     title: "QRiP",
