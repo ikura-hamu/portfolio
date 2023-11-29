@@ -58,6 +58,10 @@ const grade = computed(() => {
         </ul>
         <li>バスケットボール</li>
         <li>サッカー観戦</li>
+        <li>ISUCON <a href="https://isucon.net">公式ページ</a></li>
+        <ul>
+          <li>ISUCON13 34位</li>
+        </ul>
       </ul>
     </div>
   </div>

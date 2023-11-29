@@ -20,7 +20,7 @@ if (props.service == undefined) {
 }
 
 function autoLink(text: string) {
-  return text.replace(/(https?:\/\/[^\s]*)/g, "<a href='$1'  target=\"_blank\" rel=\"noopener noreferrer\">$1</a>");
+  return text.replace(/(https?:\/\/[a-zA-Z0-9-_\.\/]*)/g, "<a href='$1'  target=\"_blank\" rel=\"noopener noreferrer\">$1</a>");
 }
 
 const generateImgPath = (fileName: string | undefined): string => {

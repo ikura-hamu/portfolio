@@ -28,6 +28,14 @@ export const works: work[] = [
     blog: "https://trap.jp/post/1842"
   },
   {
+    title: "isu-isu-h",
+    description: "\"isu-isu-h\"(いすいすえいち）は、ISUCON(https://isucon.net)で競技者の代わりにsshしていろいろやってくれるツール群です。ansibleによる1コマンドのデプロイとGrafanaなどによる監視・計測を行います。",
+    image: "isu-isu-h.png",
+    tags: ["ISUCON", "Docker"],
+    github: "https://github.com/reactive-futakotamagawa/isu-isu-h-13",
+    blog: "https://trap.jp/post/2047/"
+  },
+  {
     title: "いかしかめかアクティビティズ",
     description: "サークルの2023年春ハッカソンで作ったWebアプリ（ゲーム）です。部内SNSのメッセージを使ったゲームで、優秀賞を獲得しました。設計から行い、interfaceを用いて疎結合を目指しつつ初心者にもわかりやすいディレクトリ構成を目指しました。",
     image: "ika-shika-meka.png",
@@ -47,7 +55,7 @@ export const works: work[] = [
   },
   {
     title: "QRiP",
-    description: "QRiPはマイナンバーカードとQRコードを用いた旅行支援ツールです。宮城県が主催した「みやぎハッカソン」(https://2023.hackathon.miyagi.jp/ ) にチーム「牛タンずんだ餅」で3日間で開発し、サーバーサイドを担当しました。",
+    description: "QRiPはマイナンバーカードとQRコードを用いた旅行支援ツールです。宮城県が主催した「みやぎハッカソン」(https://2023.hackathon.miyagi.jp/) にチーム「牛タンずんだ餅」で3日間で開発し、サーバーサイドを担当しました。",
     image: "QRiP.jpg",
     tags: ["Go", "バックエンド", "MySQL"],
   },
@@ -75,5 +83,14 @@ export const works: work[] = [
     service: "https://portfolio.ikura-hamu.work",
     serviceImage: "ikura-hamu_icon.png",
     github: "https://github.com/ikura-hamu/portfolio",
-  }
+  },
+  {
+    title: "School Breakin' Tag",
+    description: "VRChatのゲームワールドです。Unityを用いて開発し、プログラムに携わりました。",
+    image: "SchoolBreakinTag.png",
+    tags: ["Unity", "ゲーム"],
+    service: "https://vrchat.com/home/world/wrld_5fddc89d-6c2f-4208-8873-038ea25f80c5",
+    serviceImage: "SchoolBreakinTag.png",
+    blog: "https://trap.jp/post/2026/"
+  },
 ]

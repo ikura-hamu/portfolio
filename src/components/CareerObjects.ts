@@ -11,5 +11,11 @@ export const careers: career[] = [
     position: "短期インターン",
     period: "2023年8月",
     comment: "Pythonで社内で使うツールを作りました。"
-  }
+  },
+  {
+    company: "日本経済新聞社",
+    position: "長期インターン",
+    period: "2023年11月 ~ 現在",
+    comment: "いろいろしてます。"
+  },
 ]
