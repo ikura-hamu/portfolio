@@ -60,7 +60,7 @@ const grade = computed(() => {
         <li>サッカー観戦</li>
         <li>ISUCON <a href="https://isucon.net">公式ページ</a></li>
         <ul>
-          <li>ISUCON13 34位</li>
+          <li>ISUCON13 34位 <a href="https://trap.jp/post/2075/">https://trap.jp/post/2075/</a></li>
         </ul>
       </ul>
     </div>
